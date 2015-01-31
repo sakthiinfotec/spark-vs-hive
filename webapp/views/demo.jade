@@ -1,0 +1,104 @@
+extends layout
+
+block content
+  #pageContent
+    .content-wrapper
+      .content-demo
+        .container
+          div(role='tabpanel')
+            // Nav tabs 
+            ul.nav.nav-tabs(role='tablist')
+              li.active(role='presentation')
+                a(href='#search-tab', aria-controls='search', role='tab', data-toggle='tab')
+                  span.glyphicon.glyphicon-search.rta-icon
+                  |  Search
+              li(role='presentation')
+                a(href='#comparision-tab', aria-controls='comparision', role='tab', data-toggle='tab')
+                  span.glyphicon.glyphicon-picture
+                  |  Comparision
+
+            // Tab panes 
+            .tab-content
+              #search-tab.tab-pane.active(role='tabpanel')
+                br
+                form.form-inline
+                  .form-group
+                    #admission-discharge-filter.btn-group(data-toggle='buttons')
+                      label.btn.btn-primary.active
+                        input#all(type='radio', name='type', value='all', checked)
+                        | All
+                      label.btn.btn-primary
+                        input#admission(type='radio', name='type', value='admission')
+                        | Admission
+                      label.btn.btn-primary
+                        input#discharge(type='radio', name='type', value='discharge')
+                        | Discharge
+                    .input-group
+                      input.form-control(type='text', name='patientId', placeholder='Enter patient id')
+                      .input-group-addon
+                        span.glyphicon.glyphicon-search
+                    #startdatepicker.input-group.date
+                      input.form-control(type='text',name='startdate')
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-time
+                    #enddatepicker.input-group.date
+                      input.form-control(type='text',name='enddate')
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-time
+
+                  button.btn.btn-default#search(data-loading-text='Loading...') Submit
+                  br
+                  br
+                  #search-result
+
+              #comparision-tab.tab-pane(role='tabpanel')
+                br
+                button#compare.btn.btn-primary(type='button') Compare
+                br
+                .class(row='row')
+                  .col-sm-6.text-center
+                    label.label.label-success Batch Vs Real-time
+                    #area-chart
+
+  script#search-result-template(type='text/x-handlebars-template')
+    table#patient-details
+      tr
+        th S.No
+        th Date
+        th Type
+        th PatientId
+        th Name
+        th DoB
+        th Sex
+        th Address
+        th Married
+        th SSN No
+
+      | {{#each .}}
+      tr
+        td
+          | {{position}}
+        td
+          | {{admissionDt}}
+        td
+          | {{msgType}}
+        td
+          | {{pid}}
+        td
+          | {{pname}}
+        td
+          | {{dob}}
+        td
+          | {{sex}}
+        td
+          | {{address}}
+        td
+          | {{married}}
+        td
+          | {{ssn}}
+      {{/each}}
+
+  script(src='/javascripts/handlebars-v2.0.0.js')
+  script(src='/javascripts/moment.js')
+  script(src='/javascripts/bootstrap-datetimepicker.js')
+  script(src='/javascripts/analytics.js')

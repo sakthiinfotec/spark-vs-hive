@@ -1,0 +1,133 @@
+#logoWhite-anim {
+    width: 50px;
+    height: 48px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.app-title {
+    font-family: 'Open Sans', sans-serif; 
+    font-size:26px;
+    text-shadow: 0px 1px 2px #333;
+    letter-spacing: 3px;
+    color: white !important;
+}
+
+.bar-sign-up-btn {
+    margin-left: 8px;
+}
+
+#pageContent {
+    margin-top: 70px;
+    float: left;
+}
+
+.content-wrapper {
+    margin: 0px 80px 20px 80px;
+    display: block;
+    float: left;
+}
+
+.content {
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    background-color: #84B3C0;
+    padding: 25px 25px;
+    color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 0 5px #aaa;
+}
+
+.content:hover {
+    box-shadow: 0 -1px 10px 1px #A4A2A2;
+}
+
+.analytical-dashboard {
+    background-color: #6dc9ca;
+}
+
+.applications {
+    background-color: #83A365;
+}
+
+.content img {
+    border: 4px solid #F2F9FC;
+    width: 400px;
+    height: 300px;
+    float: left;
+    margin: 5px 20px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+.content img.align-right {
+    float: right;
+}
+
+.content section {
+    line-height: 1.9em;
+    text-align: justify;
+}
+
+.content section p {
+    margin-left: 450px;
+}
+
+.content-demo {
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    min-height: 475px;
+}
+
+.content-demo ul.nav li a {
+    color: #759396;
+    cursor: default;
+    background-color: #ECF2F9;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-demo ul.nav li.active a {
+    color: #759396;
+    background-color: #ECF2F9;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;    
+}
+
+.content-demo ul.nav li {
+    border-radius: 10px;
+}
+
+.btn-group, .input-group {
+  margin: 0px 12px;
+}
+
+#patient-details {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#patient-details td, #patient-details th {
+    font-size: 0.8em;
+    border: 1px solid #ddd;
+    padding: 3px 7px 2px 7px;
+}
+
+#patient-details th {
+    font-size: 0.9em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #A2C3C7;
+    color: #fff;
+}
+
+#patient-details tr.alt td {
+    background-color: #DFEDE8;
+}
+
+.rta-icon {
+    cursor: pointer;
+    color: #4F6368;
+}

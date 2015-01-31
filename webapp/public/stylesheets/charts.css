@@ -1,0 +1,6 @@
+#area-chart,
+#line-chart,
+#bar-chart,
+#pie-chart{
+  min-height: 250px;
+}

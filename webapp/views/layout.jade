@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='keywords', content='realtime, analytics, bigdata, hadoop, hive, spark')
+  meta(name='description', content='Realtime analytics on BigData')
+  meta(name='language', content='en')
+  meta(name='author', content='Sakthivel')
+  title Realtime Analytics on BigData
+  link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+  link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+  link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  link(rel='stylesheet', href='/stylesheets/normalize.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap-datetimepicker.min.css')
+  link(rel='stylesheet', href='/stylesheets/font.css')
+  link(rel='stylesheet', href='/stylesheets/main.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  script(src='/javascripts/jquery.min.js')
+  script(src='/javascripts/bootstrap.min.js')
+  
+body
+  // HEADER/NAV SECTION
+  #wrapper
+    #nav.nav.nav-scrolled.gradient-blue-green
+      a(href='#')
+        .logo.left
+          .logo-img-holder
+            img#logoWhite-anim(src='/images/header_O_white.gif')
+            span.app-title Realtime Analytics
+      .scrolled-links
+        ul
+          a(href='/')
+            li(class=(view == undefined || view == 'home') ? 'active' : '').nav-home Home
+          a(href='/docs/SECTZG629T_FR_2012HZ78469.pdf',target='_blank')
+            li(class=(view == 'docs') ? 'active' : '').nav-docs Docs
+          a(href='/samples')
+            li(class=(view == 'samples') ? 'active' : '').nav-samples Samples
+          a(href='/demo')
+            li(class=(view == 'demo') ? 'active' : '').nav-demo Demo
+          if(user)
+            li Welcome #{user.fname)!
+            a(href='/signout')
+              li.nav-demo Sign Out
+          else
+            a(href='/signin')
+              li.nav-login.nav-btn.btn-radius.center.border-box Sign In
+            a(href='/signup')
+              li.btn.cursor.btn-radius.center.bar-sign-up-btn Sign Up
+      .nav-get-started
+        .get-started-top.gradient-blue-green-darken
+  block content
+  include footer.jade

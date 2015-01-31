@@ -1,0 +1,31 @@
+doctype html
+head
+    title Sign Up to Analytics App
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/signup.css')
+    link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+    if success
+      meta(http-equiv='refresh', content='3; URL=/')
+  body.gradient-blue-green
+    .container
+      .row
+          if success
+            .col-sm-6.col-md-6.col-md-offset-2
+              .alert.alert-info #{msg}
+          else
+            .col-sm-6.col-md-4.col-md-offset-4
+              h1.text-center.login-title Sign Up to Analytics App
+              .account-wall
+                if err
+                  .alert.alert-danger #{msg}
+                form.form-signin(method='post')
+                  input.form-control(type='text', name='fname', placeholder='First Name', required='required', autofocus='autofocus')
+                  input.form-control(type='text', name='lname', placeholder='Last Name', required='required')
+                  input.form-control(type='email', name='email', placeholder='Email', required='required')
+                  input.form-control(type='password', name='password', placeholder='Password', required='required')
+                  input.form-control(type='password', name='confirmPassword', placeholder='Confirm Password', required='required')
+                  button.btn.btn-lg.btn-primary.btn-block.btn-signup(type='submit') Sign Up
+                  span.clearfix
+              a.text-center.new-account(href='/signin') Sign In
+            script(rel='stylesheet', href='/javascripts/bootstrap.min.js')
